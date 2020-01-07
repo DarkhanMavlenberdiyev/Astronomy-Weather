@@ -1,0 +1,229 @@
+.header {
+	border: ridge;
+	width: 100%;
+	height: 200px;
+	position: relative;
+	background: rgb(213,222,226);
+
+}
+
+
+.right_align{
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: right;
+  font-size: 30px;
+  padding-right: 20px;
+  font-family: fantasy;
+
+}
+.left_align {
+  position: absolute;
+  
+  top: 30%;
+  width: 100%;
+  text-align: left;
+  font-size: 30px;
+  margin-left: 20px;
+  font-family: fantasy;
+
+}
+.center_align {
+  position: absolute;
+  
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  padding-right: 50px;
+
+  font-family: fantasy;
+
+}
+
+span {
+	color: red;
+	font-size: 50px;
+	font-family: fantasy;
+	
+}
+
+
+
+nav{
+	color: red;
+}
+.header2 {
+	text-align: center;
+	color: rgb(115,71,226);
+	display: block;
+}
+#header3 {
+	margin-left: 300px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+
+
+
+}
+
+
+#h1 {
+	text-align: center;
+	margin-bottom: 50px;
+	margin-top: 100px;
+} 
+#h2 {
+	margin-left: 150px;
+	padding-top: 50px;
+	font-family: Comic Sans MS;
+	font-size: 100px;
+
+}
+
+#p1 {
+	margin-left: 500px;
+	margin-right: 500px;
+	font-family: cursive;
+	font-size: 20px;
+
+}
+#p2 {
+	font-family: cursive;
+	font-size: 20px;
+	
+	padding-right: 200px;
+}
+#img1{
+	
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	box-shadow: 0 0 50px #666;
+}
+
+.img2 {
+	height: 300px;
+	width: 250px;
+	border-radius: 50%;
+	box-shadow: 0 0 150px;
+	transition: width 3s,height 3s,transform 3s;
+
+	
+
+
+}
+
+img.img2:hover,img.img3:hover {
+	width: 400px;
+	height: 400px;
+	transform: rotate(360deg);
+}
+
+.img3 {
+	height: 250px;
+	width: 300px;
+	border-radius: 100px;
+	box-shadow: 0 0 150px;
+	transition: width 3s,height 3s,transform 3s;
+	transition-delay: 1s;
+	
+}
+
+footer {
+	background: url(daz1.jpg);
+	width: 100%;
+	height: 600px;
+
+}
+#contacts {
+	margin-top: 100px;
+}
+
+.changeColor {
+	color: red;
+}
+.changeColor2 {
+	color: green;
+}
+button {
+	background-color: rgb(196, 196, 196);
+  	border: none;
+  	color: white;
+  	padding: 15px 32px;
+  	margin-top: 15px;
+  	margin-bottom: 15px;
+  	text-align: center;
+  	border-radius: 100px;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+
+}
+
+.contactsPng {
+	transition: width .5s, height .5s;
+}
+img.contactsPng:hover {
+	width: 150px;
+	height: 150px;
+}
+
+
+.imgHide {
+	visibility: hidden;
+}
+#hideSkills {
+	margin-left: 660px;
+	margin-bottom: 50px;
+
+}
+#java {
+	margin-bottom: 50px;
+}
+#imgChange {
+	margin-bottom: 50px;
+}
+select {
+	height: 50px;
+	width: 100px;
+	border-radius: 50px;
+	
+}
+/*
+#story1 {
+	background-color: yellow;
+	animation-name: panim; 
+	animation-duration: 4s;
+
+}
+
+@keyframes panim {
+	from {color: blue;}
+	to {color: red;}
+}*/
+
+#myName {
+	animation-name: ex;
+	
+	
+
+}
+
+@keyframes ex{
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+
+
+/*
+@keyframes myname {
+  0%   {left:0px; top:0px;}
+  25%  {left:100px; top:0px;}
+  50%  {left:100px; top:100px;}
+  75%  {left:0px; top:100px;}
+  100% {left:0px; top:0px;}
+}*/

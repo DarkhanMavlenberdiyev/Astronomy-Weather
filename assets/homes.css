@@ -1,0 +1,163 @@
+
+section {
+	width: 100%;
+	height: 500px;
+	background-image: url('/static/p1.jpg');
+	
+	
+	background-size: cover;
+	margin-top: 80px;
+	overflow: hidden;
+}
+
+.over {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 500px;
+	background: rgba(0,0,0,0.4);
+	
+}
+
+body {
+	background-image: url('/static/bg.jpg');
+
+	
+}
+#h1 {
+	text-align: center;
+	color: white;
+	margin-top: 150px;
+	margin-left: 550px;
+	font-family: cursive;
+}
+
+#nav {
+    background-color: #e96e50;
+	position: absolute;
+    left: 0;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+
+ }
+
+button {
+	margin-top: 250px;
+}
+#b2 {
+	margin-left: 600px;
+}
+footer {
+	background-color: #DAD6D6;
+	width: 100%;
+	height: 300px;
+}
+
+.middle {
+	 
+	 top: 50%;
+	 transform: translateY(50%);
+	 width:100%;
+	 text-align: center;
+}
+.btns {
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+	background: #f1f1f1;
+	margin: 10px;
+	border-radius: 30%;
+	box-shadow: 0 5px 15px -5px #00000070;
+	color: #3498db;
+	overflow: hidden;
+	position: relative;
+}
+.btns i {
+	line-height: 90px;
+	font-size: 26px;
+	transition: 0.2s linear;
+}
+.btns:hover i{
+	transform: scale(1.5);
+}
+.btns::before{
+	content: '';
+	width: 120%;
+	height: 120%;
+	background: #3498db;
+	transform: rotate(45deg);
+	left: -110%;
+	top: 90%;
+}
+.btns:hover::before {
+	animation: aaa 0.7s 1;
+	top: -10%;
+	left: -10%; 
+}
+
+@keyframes aaa{
+	0%{
+		left: -110%;
+		top: 90%;
+	}
+		50%{
+			top: 10%;
+			left: -30%;
+
+			}100%{
+				top: -10%;
+				left: -10%;
+			}
+}
+#contacts {
+	padding-top: 50px;
+	text-align: center;
+}
+
+#block {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 50px;
+
+	width: 100%;
+
+}
+#c1 {
+	padding-top: 50px;
+}
+
+#openw2{
+	margin-top: 50px;
+	background: #9E9696;
+	border-radius: 5%;
+	box-shadow:  10px 10px 8px #888888;
+}
+#row2 {
+	margin-top: 50px;
+}
+.openw1{
+	background-image: url('/static/openw2.png');
+	background-size: contain;
+	height: 300px;
+	width: 300px;
+	animation: open infinite;
+
+	
+}
+@keyframes open{
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+
+.open-pause {
+	background-image: url('/static/openw2.png');
+	background-size: contain;
+	height: 300px;
+	width: 300px;
+	animation-play-state: paused;
+
+}
+
+

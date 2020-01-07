@@ -1,0 +1,159 @@
+// Color variables (appears count calculates by raw css)
+@color0: #4478e3; // Appears 3 times
+
+// Width variables (appears count calculates by raw css)
+@width2: 100vw; // Appears 3 times
+
+
+span {
+	font-family: fantasy;
+	font-size: 20px;
+}
+.flex-container {
+	display: flex;
+	flex-wrap: nowrap;
+	margin-left: 500px;
+}
+.flex-container>div {
+	font-size: 20px;
+	margin-top: 30px;
+	margin: 10px;
+	width: 300px;
+}
+#form {
+	position: absolute;
+	width: 500px;
+}
+body {
+	background-image: url('/static/bgg.jpg');
+	margin-top: 100px;
+}
+.openw1 {
+	animation-duration: 10s;
+	animation: open infinite;
+	background-image: url('/static/openw2.png');
+	background-size: contain;
+	height: 50px;
+	width: 50px;
+}
+@keyframes {
+	open {
+		from {transform: rotate(0deg);
+	}
+	drop {
+		0% { transform: translateY(80%);
+		opacity:.6;
+	}
+	wave {
+		to {transform: translateX(-100%);
+	}
+	ball {
+		to {transform: translateY(20%);
+	}
+}
+to {
+	transform: rotate(360deg);
+}
+footer {
+	height: 300px;
+	margin-top:10px;
+	text-align: center;
+	div {
+		background-color:@color0;
+		color: #ffffff;
+		margin: -5px 0px 0px 0px;
+		padding:0px;
+		text-align:center;
+	}
+}
+#wnav {
+	display: none;
+}
+@import {
+	url("https {
+		&://fonts.googleapis.com/css?family=Lato {
+			400 {
+				bottom:0px;
+				position:relative;
+				width:@width2;
+			}
+		}
+	}
+}
+400i {
+	bottom:0px;
+	position:relative;
+	width:@width2;
+}
+700"); {
+	footer {
+		bottom:0px;
+		position:relative;
+		width:@width2;
+	}
+}
+svg {
+	width:100%;
+}
+.arrow {
+	stroke-width: .3px;
+	stroke:yellow;
+}
+.topball {
+	animation-delay: 0.3s;
+	animation-direction: alternate;
+	animation-iteration-count:infinite;
+	animation: ball 1.5s ease-in-out;
+	cursor:pointer;
+}
+.wave {
+	animation-iteration-count:infinite;
+	animation: wave 3s linear;
+	fill: @color0;
+}
+.drop {
+	animation: drop 5s ease infinite normal;
+	fill: transparent;
+	opacity:.6;
+	stroke-width:0.5;
+	stroke: @color0;
+	transform: translateY(80%);
+}
+.drop1 {
+	transform-origin: 20px 3px;
+}
+.drop2 {
+	animation-delay: 3s;
+	animation-duration:3s;
+	transform-origin: 25px 3px;
+}
+.drop3 {
+	animation-delay: -2s;
+	animation-duration:3.4s;
+	transform-origin: 16px 3px;
+}
+.gooeff {
+	filter: url(#goo);
+}
+#wave2 {
+	animation-direction: reverse;
+	animation-duration:5s;
+	opacity: .6;
+}
+#wave3 {
+	animation-duration: 7s;
+	opacity:.3;
+}
+80% {
+	opacity:.6;
+	transform: translateY(80%);
+}
+90% {
+	opacity:.6;
+	transform: translateY(10%);
+}
+100% {
+	opacity:0;
+	stroke-width:0.2;
+	transform: translateY(0%) scale(1.5);
+}

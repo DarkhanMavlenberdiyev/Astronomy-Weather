@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Регистрация</title>
+  <meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  
+  
+      <link rel="stylesheet" href="/static/sign.css">
+
+  
+</head>
+
+<body background="/static/bg.jpg">
+
+		<div id="nav"  class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+		<img src="/static/openw .png">
+  <h5 class="my-0 mr-md-auto font-weight-normal">Darkhan's weather</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a id="homes" href="/">Home</a>
+    <a class="p-2 text-dark" href="#">Weather</a>
+    <a class="p-2 text-dark" href="#">Support</a>
+    <a class="p-2 text-dark" href="#">Pricing</a>
+  </nav>
+  <a class="btn btn-outline-primary" href="http://localhost:8000/sign/">Войти</a>
+</div>	
+
+<div class="container">
+	<section id="content">
+		<h1>Login Form</h1>
+		<form class="form" action="" method="post">
+			
+					{% csrf_token %}
+
+					{{form.user_name}}
+					{{form.password}}
+					Birthday: <input type="date" name="bday"><br>
+					<select>
+  						<option value="volvo">Almaty</option>
+						 <option value="saab">Kaskelen</option>
+					</select><br>
+					<input type="radio" name="gender" value="male"> Male<br>
+  					<input type="radio" name="gender" value="female"> Female<br>
+					<input type="checkbox" name="vehicle2" value="Car"> I agree to the terms and conditions<br>
+
+			
+					<input id="submit" type="submit" name="send" value="Sumbit" class="mt-2 btn btn-danger">
+			
+		</form>
+		
+	</section>
+</div>
+
+  
+  
+</body>
+</html>

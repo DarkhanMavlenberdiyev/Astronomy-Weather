@@ -1,0 +1,39 @@
+body {
+	margin: 0;
+	padding: 0;
+
+}
+
+
+input#submit:hover{
+	border:none;
+	border-radius: 20%;
+	
+	background-color: green;
+
+}
+
+h1 {
+	animation-name: anim;
+	animation-duration: .5s;
+}
+
+@keyframes anim{
+	
+	to {transform: scale(5);}
+}
+
+.container {
+	position: absolute;
+	width: 100%;
+	padding: 40px;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%,-50%);
+}
+.form-control:focus {
+	width: 50%;
+	height: 50%;
+
+}

@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather</title>
+  <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/homes.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <div id="nav" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm ">
+    <img src="/static/openw .png">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Darkhan's weather</h5>
+    <nav class="my-2 my-md-0 mr-md-3 ">
+      <a id="anime" href="/">Home</a>
+      <a class="p-2 text-dark" href="/weather/">Weather</a>
+      <a class="p-2 text-dark" href="#">Support</a>
+
+      <a class="p-2 text-dark" href="#">Pricing</a>
+
+    </nav>
+    <a class="btn btn-outline-primary" href="http://localhost:8000/sign/">Sign In</a>
+  </div>	
+
+
+  <section>
+    <header class="over">
+      <table>
+        <tr>
+          <td>
+             <button class="fas fa-arrow-circle-left" id="b1"></button>    
+          </td>
+          <td>
+            <h1 id="h1">Weather</h1>
+
+          </td>
+          <td>
+            <button class="fas fa-arrow-circle-right" id="b2"></button>  
+          </td>
+        </tr>
+      </table>
+    </header>
+    
+  </section>
+
+  <div id="block">
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="openw1">
+              
+            </div>
+          </div>
+
+          <div class="col-sm" id="c1">
+             
+                <p id="c1p">The "OpenWeatherMap API Guide" helps you find useful information, links, documents to start using our weather API services smoothly.
+              OpenWeatherMap is one of the leading digital weather information providers. We are a small IT company, established in 2014 by a group of engineers and experts in Big Data, data processing, and satellite imagery processing. Our headquarters is in the UK, we have an office in the US, and the development team in Latvia (EU).</p>
+          </div>
+
+        </div>
+        
+        <div id="openw2">
+          <img src="/static/openw.png">
+        </div>
+
+        <div class="row" id="row2">
+          <div class="col-sm">
+              <h5 id="cwd">Current Weather Data</h5>
+              <p id="cwdp">Access current weather data for any location including over 200,000 cities
+              Current weather is frequently updated based on global models and data from more than 40,000 weather stations
+              Data is available in JSON, XML, or HTML format
+              Available for Free and all other paid accounts</p>
+          </div>
+          <div class="col-sm">
+              <h5 id="hf">Hourly Forecast</h5>
+              <p id="hfp">Hourly forecast is available for 4 days
+              Forecast weather data for 96 timestamps
+              Higher geographic accuracy
+              Forecast is available in JSON and XML
+              Available for Developer, Professional and Enterprise accounts</p>
+          </div>
+          <div class="col-sm">
+              <h5 id="df">16 day / daily forecast</h5>
+              <p id="dfp">16 day forecast is available at any location or city
+              16 day forecast includes daily weather
+              Forecast is available in JSON and XML
+              Available for all paid accounts</p>
+          </div>
+        </div>
+       
+          
+    </div>
+    
+  </div>
+
+
+  <footer>
+    
+    <h3 id="contacts">Contacts:</h3>
+    <div class="middle">
+      <a class="btns" href="https://vk.com/id362494041">
+        <i class="fab fa-vk"></i>
+      </a>
+      <a class="btns" href="https://www.instagram.com/">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="btns" href="https://www.google.kz/">
+        <i class="fab fa-google"></i>
+      </a>
+      <a class="btns" href="https://www.facebook.com/">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+      
+  </footer>
+
+  
+
+
+  <script type="text/javascript" src="/static/jquerys.min.js"></script>
+  <script type="text/javascript" src="/static/homes.js"></script>
+  <script src="https://kit.fontawesome.com/8316cdb0d9.js" crossorigin="anonymous"></script>
+
+  </body>
+  </html>
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>ss</title>
+</head>
+<body>
+  <div id="demo">
+    <h1>Ajax</h1>
+    <button type="button" onclick="loadDoc()">Change</button>
+  </div>
+
+  <script type="text/javascript">
+  function loadDoc(){
+    var x = new XMLHttpRequest();
+    x.onreadystatechange = function(){
+      if(this.readyState==4 && this.status==200){
+        document.getElementById('demo').innerHTML = this.responseText;
+      }
+    };
+    x.open("GET","/static/ajax_info.txt",true);
+    x.send();
+  }
+  </script>
+
+</body>
+</html>

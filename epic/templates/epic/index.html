@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EPIC</title>
+		<link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+		<div id="nav"  class="navbar fixed-top d-flex flex-column  flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+		<div class="openw1"></div>
+  		<h5 class="my-0 mr-md-auto font-weight-normal" style="margin-left: 20px;">EPIC</h5>
+  		<nav class="my-2 my-md-0 mr-md-3">
+	    	<a id="homes" href="/">Weather</a>
+	    	<a class="p-2 text-dark" href="/astronomy/">Astronomy</a>
+	    	<a class="p-2 text-dark" href="/astronomy/mars">Mars</a>
+	    	<a class="p-2 text-dark" href="/epic">EPIC</a>
+  		</nav>
+
+</div>	
+<h1 style="color:white;margin-top: 100px;position: absolute;margin-left: 50px;font-family: serif;">EPIC- Earth Polychromatic Imaging Camera</h1>
+
+<img src="{{epics.0.img}}" id="img" style="margin-left: 600px;margin-top: 150px;position: absolute;" height="700" width="700">
+<h2 style="color:rgb(17, 156, 9);margin-top: 150px;position: absolute;margin-left: 50px;font-family: serif;">{{epics.0.caption}}</h2>
+<button id="right" class="btn btn-primary" style="margin-left: 1250px;margin-top: 450px;">></button>
+<button id="left" class="btn btn-primary" style="margin-left: 600px;margin-top: 450px;"><</button>
+<div id="cont">
+	<p id="id">Identifier: {{epics.0.id}}</p>
+	<p id="date">Date: {{epics.0.date}}</p>
+	<form method="POST">
+		{% csrf_token %}
+		<select name="date">
+			{% for date in dates%}
+			<option value="{{date}}">{{date}}</option>
+			{% endfor %}
+		</select>
+		<input type="submit" name="">
+
+	</form>
+</div>
+
+<script type="text/javascript" src="/static/jquerys.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var list = new Array();
+
+
+		 "{% for epic in epics %}"
+		 	var dic =  {
+		 		'date': '{{epic.date}}',
+		 		'img': '{{epic.img}}',
+		 		'caption':'{{epic.caption}}',
+		 		'id':'{{epic.id}}'
+		 	}
+
+		 	list.push(dic);
+		 "{% endfor %}"
+
+		 var ind = 0;
+		 $('#right').on('click',function(){
+		 	if (ind<list.length) {
+		 		ind++;
+		 		$('#img').attr('src',list[ind]['img']);
+		 		$('#date').html('Date: '+list[ind]['date']);
+		 		$('#id').html('Identifier: '+list[ind]['id']);
+
+		 	}
+		 });
+		 $('#left').on('click',function(){
+		 	if (ind>0) {
+		 		ind--;
+		 		$('#img').attr('src',list[ind]['img']);
+		 		$('#date').html('Date: '+list[ind]['date']);
+		 		$('#id').html('Identifier: '+list[ind]['id']);
+		 	}
+		 });
+
+		 	
+		 
+	});
+</script>
+<style type="text/css">
+	#cont {
+		position: absolute;
+		margin-left: 100px;
+		margin-top: 400px;
+		color:white;
+		width: 400px;
+	}#cont > select {
+		width: 200px;
+	}
+	#cont > p {
+		color:rgb(17, 156, 9);
+		font-size: 20px;
+		font-family: serif;
+	}
+	button {
+		border-radius: 5px;
+		
+		width: 50px;
+		height: 50px;
+		position: absolute;
+	}
+	body{
+		background-color: black;
+	}
+		.openw1{
+			background-image: url('/static/earth.jpg');
+			background-size: contain;
+			height: 50px;
+			width: 50px;
+			animation: open infinite;
+			animation-duration: 10s;
+		}
+			@keyframes open{
+			from {transform: rotate(0deg);}
+			to {transform: rotate(360deg);}
+		}
+</style>
+
+</body>
+</html>
