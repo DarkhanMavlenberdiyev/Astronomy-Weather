@@ -11,7 +11,6 @@ urlpatterns = [
     path('',include('weather.urls')),
     path('astronomy/',include('mars.urls')),
     path('epic/',include('epic.urls')),
-    url(r'^api-auth/', include('rest_framework.urls')),
 ]
 
 urlpatterns+=staticfiles_urlpatterns()
